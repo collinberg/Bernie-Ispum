@@ -374,8 +374,10 @@ footer {
   width: 1200px; }
 
 h1 {
-  font-size: 3em;
-  color: #046380; }
+  font-size: 4em;
+  text-transform: uppercase;
+  color: #046380;
+  text-align: center; }
 
 button {
   border-radius: 3px;
@@ -384,10 +386,27 @@ button {
   padding: 5px 30px;
   box-shadow: none;
   display: block;
+  transition: all .4s;
   border: 3px solid #046380;
   margin: 10px 0; }
+  button:hover {
+    padding: 5px 40px;
+    background: #046380;
+    color: white; }
 
-label {
+fieldset {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  text-align: center; }
+  fieldset div {
+    display: inline-block;
+    width: 32%;
+    box-sizing: content-box; }
+  fieldset label {
+    display: block; }
+
+#rangeLabel {
   display: inline-block;
   background: #AAA;
   border-radius: 3px;
@@ -396,5 +415,37 @@ label {
   text-align: center;
   height: 20px;
   width: 20px; }
+
+#Header {
+  text-align: center;
+  padding: 30px 0; }
+
+#userSubmit {
+  margin: 0 auto;
+  max-width: 500px; }
+
+/*===========
+Range Updater
+=============*/
+input[type=range] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */ }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent; }
 
 /*# sourceMappingURL=style.css.map */
