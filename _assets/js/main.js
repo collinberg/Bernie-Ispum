@@ -26,27 +26,27 @@ $("input[type=range]").mousemove(labelUpdate);
 
 // Create a Sample Paragraph of Tulsa Ipsum
 var ipsum = Array(
-	'Tulsa',
-	'TU',
-	'TCC',
-	'broken Arrow',
-	'riverside',
-	'BOC Center',
-	'coffee Shop Manifesto',
-	'cherry Street',
-	'blue Dome District',
-	'guthery Green',
-	'woodland Hills Mall',
-	'oilers Hocky game',
-	'state Fair',
-	'everyone Loves',
-	'oil on oil on oil',
-	'what river',
-	'turkey mountain trails',
-	'a show at Cains',
-	'a show at the Brady',
-	'Philbrook Museum',
-	'We have a zoo?'
+	'We, not me',
+	'It’s Time to Make College Tuition Free and Debt Free',
+	'Enough with the Damn Emails',
+	'Nobody working 40 hours a week should live in poverity',
+	'A living wage will',
+	'America now has more wealth and income inequality than any major developed country on earth.',
+	'Take on Wall Street',
+	'Citizens United',
+	'Peope',
+	'Country',
+	'Let my People Go',
+	'Feel the Bern',
+	'democratic socialism',
+	'Paid for by Bernie, not the billionaires',
+	'Are you ready?',
+	'Rebuild America Act',
+	'We expect that our tap water is clean',
+	'When it comes to the rights of women, we cannot go backwards. We have got to go forward.',
+	'we will ensure that is a war they are going to lose.',
+	'It will not be as high as 90%',
+	'Look out for North Korea!'
 	);
 // Allow User to Select if they want a Header, Sentance, or Paragraph 
 
