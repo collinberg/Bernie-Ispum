@@ -27,7 +27,7 @@ $("input[type=range]").mousemove(labelUpdate);
 // Create a Sample Paragraph of Tulsa Ipsum
 var ipsum = Array(
 	'We, not me',
-	'It’s Time to Make College Tuition Free and Debt Free ',
+	"It's Time to Make College Tuition Free and Debt Free ",
 	'Enough with the Damn Emails ',
 	'Nobody working 40 hours a week should live in poverity ',
 	'A living wage will ',
@@ -74,15 +74,37 @@ function doStuff(){
 
 	} else if('sentance' == amountType){ //Sentance
 
-		outputText += '<p>';
 		for(var i = 1; i <= repeaterNum; i++) {
 			//start by wrapping everything in a <p> tag
-			var rando = Math.floor((Math.random() * 20)) + 1;
-			
+			console.log('paragraph was used');
+			outputText += '<p>';
+			for(var para = 1; para <= 3; para++) {
+				var rando = Math.floor((Math.random() * 20)) + 1;
+				outputText += ipsum[rando];
+
+			};
 			// Most important part here
-			outputText += ipsum[rando];
+			
+			outputText += '</p>';
 		};
-		outputText += '</p>';
+
+	} else if('paragraph' == amountType){ //Sentance
+
+		
+		for(var i = 1; i <= repeaterNum; i++) {
+			//start by wrapping everything in a <p> tag
+			console.log('paragraph was used');
+			outputText += '<p>';
+			for(var para = 1; para <= 7; para++) {
+				var rando = Math.floor((Math.random() * 20)) + 1;
+				outputText += ipsum[rando];
+
+			};
+			// Most important part here
+			
+			outputText += '</p>';
+		};
+		
 
 	}
 
@@ -90,8 +112,7 @@ function doStuff(){
 
 	// Output the text
 	outputContainer.append(outputText);
-	console.log('Crushed it');
-	console.log(rando);
+
 }
 $('button').click(function() {
 	//Remove any paragraph elements if they are in the area
