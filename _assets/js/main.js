@@ -8,6 +8,8 @@ var rangeSlide = $('#Number');
 var repeaterNum = rangeSlide.val();
 var outputContainer = $('#content');
 
+
+
 //Set the Text of the label on Load
 slideNumber.text(rangeSlide.val() );
 
@@ -49,22 +51,37 @@ var ipsum = Array(
 	'Look out for North Korea!'
 	);
 // Allow User to Select if they want a Header, Sentance, or Paragraph 
+function doStuff(){
 
-$('button').click(function() {
+	// Declare the Amount type here, not when page loads. Otherwise its set to undefined
+	var amountType = $('input[name="genText"]:checked').val();
 
-	//Remove any paragraph elements if they are in the area
-	$('#content p').remove();
+	//Declare outbut to be an empty string
 	var outputText = '';
-	console.log(repeaterNum);
+
 	for(var i = 1; i <= repeaterNum; i++) {
 		//start by wrapping everything in a <p> tag
 		
 		outputText += '<p>';
-		outputText += i;
+		// Most important part here
+		outputText += amountType;
+		
 		outputText += '</p>';
 
 	};
+
+	// Output the text
 	outputContainer.append(outputText);
+	console.log('Crushed it');
+}
+$('button').click(function() {
+	//Remove any paragraph elements if they are in the area
+	$('#content p').remove();
+	
+
+	
+	doStuff();
+
 	
 	
 });
