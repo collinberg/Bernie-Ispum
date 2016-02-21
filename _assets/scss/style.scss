@@ -40,7 +40,7 @@ button{
   text-transform: uppercase;
   transition: all .4s;
   border: 3px solid $secondary;
-  margin: 10px auto;
+  margin: 10px 0;
   &:hover{
     padding: 5px 40px;
     background: darken($secondary, 10%);
@@ -48,7 +48,7 @@ button{
   }
 }
 fieldset{
-    margin: 0px;
+    margin: 10px 0px;
     padding: 0px;
     border: none;
     text-align: center;
@@ -94,7 +94,7 @@ fieldset{
   max-width: 500px;
   background: white;
   padding: 10px;
-  border: 2px solid #EAEAEA;
+  //border: 2px solid #EAEAEA;
   border-radius: 3px;
 }
 #content{
