@@ -386,14 +386,14 @@ button {
   text-transform: uppercase;
   transition: all .4s;
   border: 3px solid #f55b5b;
-  margin: 10px 0; }
+  margin: 10px auto; }
   button:hover {
     padding: 5px 40px;
     background: #f22b2b;
     color: white; }
 
 fieldset {
-  margin: 10px 0px;
+  margin: 0px;
   padding: 0px;
   border: none;
   text-align: center; }
@@ -434,6 +434,7 @@ fieldset {
   max-width: 500px;
   background: white;
   padding: 10px;
+  border: 2px solid #EAEAEA;
   border-radius: 3px; }
 
 #content {
