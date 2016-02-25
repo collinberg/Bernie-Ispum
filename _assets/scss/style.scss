@@ -7,18 +7,25 @@ Main Style Sheet
 $main:        #0066ba ;
 $secondary:   #f55b5b;
 $third:       #97c5ed;
-
+html{
+  height: 100%;
+}
 body{
-	background: #white;
+	background: white;
 	font-size: 16px;
 	line-height: 1.4em;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px; /* Whatever the height of the footer is */
 }
 footer{
 	color: $third;
 	padding: 5px 0;
 	background: $main;
   position: absolute;
+  right: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
 	a{
 	 color: $third;
@@ -27,7 +34,7 @@ footer{
 }
 .container{
 	margin: 0 auto;
-	width: 1200px;
+	max-width: 1200px;
 }
 
 button{
@@ -61,6 +68,9 @@ fieldset{
       display: block;
     }
 }
+main{
+  padding: 0 10px;
+}
 #rangeLabel{
   display: inline-block;
   background: #AAA;
@@ -86,6 +96,7 @@ fieldset{
     color: $secondary;
     font-weight: 600;
     font-size: 3.2em;
+    line-height: 1em;
     font-family: 'Arvo', serif;
   }
 }
@@ -101,10 +112,13 @@ fieldset{
   //margin: 30px auto;
   max-width: 500px;
   background: white;
-  min-height: 30px;
+  //min-height: 30px;
   padding: 10px;
   border: 2px solid #EAEAEA;
   border-radius: 3px;
+  p::first-letter{
+    text-transform: uppercase;
+  }
 }
 /*===========
 Range Updater

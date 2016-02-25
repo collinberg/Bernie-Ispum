@@ -356,17 +356,26 @@ td,
 th {
   padding: 0; }
 
+html {
+  height: 100%; }
+
 body {
-  background: #white;
+  background: white;
   font-size: 16px;
-  line-height: 1.4em; }
+  line-height: 1.4em;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px;
+  /* Whatever the height of the footer is */ }
 
 footer {
   color: #97c5ed;
   padding: 5px 0;
   background: #0066ba;
   position: absolute;
+  right: 0;
   bottom: 0;
+  left: 0;
   width: 100%; }
   footer a {
     color: #97c5ed;
@@ -374,7 +383,7 @@ footer {
 
 .container {
   margin: 0 auto;
-  width: 1200px; }
+  max-width: 1200px; }
 
 button {
   border-radius: 3px;
@@ -404,6 +413,9 @@ fieldset {
   fieldset label {
     display: block; }
 
+main {
+  padding: 0 10px; }
+
 #rangeLabel {
   display: inline-block;
   background: #AAA;
@@ -428,6 +440,7 @@ fieldset {
     color: #f55b5b;
     font-weight: 600;
     font-size: 3.2em;
+    line-height: 1em;
     font-family: 'Arvo', serif; }
 
 #userSubmit {
@@ -439,10 +452,11 @@ fieldset {
 #content {
   max-width: 500px;
   background: white;
-  min-height: 30px;
   padding: 10px;
   border: 2px solid #EAEAEA;
   border-radius: 3px; }
+  #content p::first-letter {
+    text-transform: uppercase; }
 
 /*===========
 Range Updater
