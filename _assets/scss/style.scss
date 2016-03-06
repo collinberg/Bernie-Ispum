@@ -7,6 +7,7 @@ Main Style Sheet
 $main:        #0066ba ;
 $secondary:   #f55b5b;
 $third:       #97c5ed;
+$forth:       #364350;
 html{
   height: 100%;
 }
@@ -19,9 +20,9 @@ body{
   padding-bottom: 100px; /* Whatever the height of the footer is */
 }
 footer{
-	color: $third;
-	padding: 5px 0;
-	background: $main;
+	color: $forth;
+	padding: 15px 0;
+	background: #edf0f7;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -66,6 +67,7 @@ fieldset{
     }
     label{
       display: block;
+      color: white;
     }
 }
 main{
@@ -73,9 +75,9 @@ main{
 }
 #rangeLabel{
   display: inline-block;
-  background: #AAA;
+  background: white;
+  color: $main;
   border-radius: 3px;
-  color: white;
   padding: 10px;
   text-align: center;
   height: 20px;
@@ -101,18 +103,15 @@ main{
   }
 }
 #userSubmit{
-  //margin: 0 auto;
   max-width: 500px;
   background: white;
   padding: 10px;
-  //border: 2px solid #EAEAEA;
-  border-radius: 3px;
+  border-radius: 5px;
+  background: $main;
 }
 #content{
-  //margin: 30px auto;
   max-width: 500px;
   background: white;
-  //min-height: 30px;
   padding: 10px;
   border: 2px solid #EAEAEA;
   border-radius: 3px;
@@ -127,7 +126,7 @@ input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;
   width: 80%;
-  padding-right: 5%;
+  margin-right: 5%;
 }
 input[type=range]:focus {
   outline: none;
@@ -138,7 +137,7 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
+  background: white;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
@@ -155,7 +154,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -10px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+  background: #EEE;
 }
 
 input[type=range]::-moz-range-track {
@@ -211,8 +210,8 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #3071a9;
+  background: #EEE;
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: #367ebd;
+  background: #EEE;
 }
