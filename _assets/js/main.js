@@ -1,5 +1,5 @@
 /*============
-* 
+*
 * Main Javascript for Tulsa Ipsum
 *
 * =================*/
@@ -32,7 +32,7 @@ var ipsum = Array(
 	'nobody working 40 hours a week should live in poverity ',
 	'a living wage will ',
 	'america now has more wealth and income inequality ',
-	'than any major developed country on earth. ', 
+	'than any major developed country on earth. ',
 	'take on Wall Street ',
 	'citizens united ',
 	'people ',
@@ -61,23 +61,23 @@ var ipsum = Array(
 
 
 
-// Allow User to Select if they want a Header, Sentance, or Paragraph 
+// Allow User to Select if they want a Header, Sentance, or Paragraph
 function doStuff(){
-
+	outputContainer.removeClass('hide');
 	// Declare the Amount type here, not when page loads. Otherwise its set to undefined
 	var amountType = $('input[name="genText"]:checked').val();
 
 	//Declare outbut to be an empty string
 	var outputText = '';
 	if('header' == amountType) { //Header
-		
+
 		for(var i = 1; i <= repeaterNum; i++) {
 				//start by wrapping everything in a <p> tag
 				var rando = Math.floor((Math.random() * 30)) + 1;
 				outputText += '<p>';
 				// Most important part here
 				outputText += ipsum[rando];
-				
+
 				outputText += '</p>';
 
 			};
@@ -94,13 +94,13 @@ function doStuff(){
 
 			};
 			// Most important part here
-			
+
 			outputText += '</p>';
 		};
 
 	} else if('paragraph' == amountType){ //Sentance
 
-		
+
 		for(var i = 1; i <= repeaterNum; i++) {
 			//start by wrapping everything in a <p> tag
 			console.log('paragraph was used');
@@ -111,14 +111,14 @@ function doStuff(){
 
 			};
 			// Most important part here
-			
+
 			outputText += '</p>';
 		};
-		
+
 
 	}
 
-	
+
 
 	// Output the text
 	outputContainer.append(outputText);
@@ -127,15 +127,11 @@ function doStuff(){
 $('button').click(function() {
 	//Remove any paragraph elements if they are in the area
 	$('#content p').remove();
-	
 
-	
+
+
 	doStuff();
 
-	
-	
+
+
 });
-
-
-
-

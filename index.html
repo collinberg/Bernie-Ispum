@@ -11,49 +11,51 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-	<header>
-
-	</header>
-	<main>
+	<header id="Header">
 		<div class="container">
-			<section id="Header">
+			<section >
 				<h1> Bernie Ipsum </h1>
 				<span>Lorem Issues</span>
 			</section>
-			<section id="userSubmit">
-					<fieldset>
-						<div>
-							<input type="radio" name="genText" value="header">
-							<label>Header </label>
-						</div>
-						<div>
-							<input type="radio" name="genText" value="sentance" checked>
-							<labeL>Sentence</label>
-						</div>
-						<div>
-							<input type="radio" name="genText" value="paragraph">
-							<label>Paragraph</label>
-						</div>
-					</fieldset>
-					<input id="Number" name="number-range" type="range" min=1 max=5 value=3>
-					<label id="rangeLabel" for="number-range"></label>
-					<button>Feel the Bern</button>
-			</section>
-			<section id="content" class="hide">
-				
+	</header>
+	<main>
+		<section class="input-wrap">
+		<div class="container">
 
-			</section>
-
-
+				<div id="userSubmit">
+						<fieldset>
+							<div>
+								<input type="radio" name="genText" value="header">
+								<label>Header </label>
+							</div>
+							<div>
+								<input type="radio" name="genText" value="sentance" checked>
+								<labeL>Sentance</label>
+							</div>
+							<div>
+								<input type="radio" name="genText" value="paragraph">
+								<label>Paragraph</label>
+							</div>
+						</fieldset>
+						<input id="Number" name="number-range" type="range" min=1 max=5 value=3>
+						<label id="rangeLabel" for="number-range"></label>
+						<button>Feel the Bern</button>
+				</div>
 		</div>
+		</section>
+		<section>
+			<div id="content" class="hide">
+
+			</div>
+		</section>
 	</main>
 	<footer>
 		<div class="container">
-			<p>Created with brains by Web Devs</p>
+			<p>Created by <a href="http://twitter.com/collinaberg">Collin Berg</a></p>
 		</div>
 		<script>
 		/*============
-* 
+*
 * Main Javascript for Tulsa Ipsum
 *
 * =================*/
@@ -86,7 +88,7 @@ var ipsum = Array(
 	'nobody working 40 hours a week should live in poverity ',
 	'a living wage will ',
 	'america now has more wealth and income inequality ',
-	'than any major developed country on earth. ', 
+	'than any major developed country on earth. ',
 	'take on Wall Street ',
 	'citizens united ',
 	'people ',
@@ -115,7 +117,7 @@ var ipsum = Array(
 
 
 
-// Allow User to Select if they want a Header, Sentance, or Paragraph 
+// Allow User to Select if they want a Header, Sentance, or Paragraph
 function doStuff(){
 
 	// Declare the Amount type here, not when page loads. Otherwise its set to undefined
@@ -124,14 +126,14 @@ function doStuff(){
 	//Declare outbut to be an empty string
 	var outputText = '';
 	if('header' == amountType) { //Header
-		
+
 		for(var i = 1; i <= repeaterNum; i++) {
 				//start by wrapping everything in a <p> tag
 				var rando = Math.floor((Math.random() * 30)) + 1;
 				outputText += '<p>';
 				// Most important part here
 				outputText += ipsum[rando];
-				
+
 				outputText += '</p>';
 
 			};
@@ -148,13 +150,13 @@ function doStuff(){
 
 			};
 			// Most important part here
-			
+
 			outputText += '</p>';
 		};
 
 	} else if('paragraph' == amountType){ //Sentance
 
-		
+
 		for(var i = 1; i <= repeaterNum; i++) {
 			//start by wrapping everything in a <p> tag
 			console.log('paragraph was used');
@@ -165,14 +167,14 @@ function doStuff(){
 
 			};
 			// Most important part here
-			
+
 			outputText += '</p>';
 		};
-		
+
 
 	}
 
-	
+
 
 	// Output the text
 	outputContainer.append(outputText);
@@ -181,13 +183,13 @@ function doStuff(){
 $('button').click(function() {
 	//Remove any paragraph elements if they are in the area
 	$('#content p').remove();
-	
 
-	
+
+
 	doStuff();
 
-	
-	
+
+
 });
 
 
