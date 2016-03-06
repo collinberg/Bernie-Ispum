@@ -363,9 +363,9 @@ body {
   background: white;
   font-size: 16px;
   line-height: 1.4em;
-  min-height: 100%;
+  min-height: 90%;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 85px;
   /* Whatever the height of the footer is */ }
 
 footer {
@@ -376,14 +376,18 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   footer a {
     color: #97c5ed;
     text-decoration: none; }
 
 .container {
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 900px; }
+
+.hide {
+  opacity: 0; }
 
 button {
   border-radius: 3px;
@@ -395,7 +399,7 @@ button {
   text-transform: uppercase;
   transition: all .4s;
   border: 3px solid #f55b5b;
-  margin: 10px 0; }
+  margin: 0px auto; }
   button:hover {
     padding: 5px 40px;
     background: #f22b2b;
@@ -428,7 +432,9 @@ main {
   width: 20px; }
 
 #Header {
-  padding: 30px 0; }
+  padding: 30px 0;
+  background: #edf0f7;
+  text-align: center; }
   #Header h1 {
     font-size: 2em;
     text-transform: uppercase;
@@ -444,15 +450,29 @@ main {
     line-height: 1em;
     font-family: 'Arvo', serif; }
 
-#userSubmit {
-  max-width: 500px;
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
-  background: #0066ba; }
+.input-wrap {
+  position: relative; }
+  .input-wrap:after {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    background-color: #edf0f7;
+    content: "";
+    top: 0;
+    z-index: -1; }
+  .input-wrap #userSubmit {
+    max-width: 500px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    background: #0066ba;
+    margin: 0 auto; }
 
 #content {
   max-width: 500px;
+  margin: 20px auto;
   background: white;
   padding: 10px;
   border: 2px solid #EAEAEA;

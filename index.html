@@ -8,45 +8,48 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-	<header>
-
-	</header>
-	<main>
+	<header id="Header">
 		<div class="container">
-			<section id="Header">
+			<section >
 				<h1> Bernie Ipsum </h1>
 				<span>Lorem Issues</span>
 			</section>
-			<section id="userSubmit">
-					<fieldset>
-						<div>
-							<input type="radio" name="genText" value="header">
-							<label>Header </label>
-						</div>
-						<div>
-							<input type="radio" name="genText" value="sentance" checked>
-							<labeL>Sentance</label>
-						</div>
-						<div>
-							<input type="radio" name="genText" value="paragraph">
-							<label>Paragraph</label>
-						</div>
-					</fieldset>
-					<input id="Number" name="number-range" type="range" min=1 max=5 value=3>
-					<label id="rangeLabel" for="number-range"></label>
-					<button>Feel the Bern</button>
-			</section>
-			<section id="content" class="hide">
-				
-
-			</section>
-
-
 		</div>
+	</header>
+	<main>
+		<section class="input-wrap">
+		<div class="container">
+
+				<div id="userSubmit">
+						<fieldset>
+							<div>
+								<input type="radio" name="genText" value="header">
+								<label>Header </label>
+							</div>
+							<div>
+								<input type="radio" name="genText" value="sentance" checked>
+								<labeL>Sentance</label>
+							</div>
+							<div>
+								<input type="radio" name="genText" value="paragraph">
+								<label>Paragraph</label>
+							</div>
+						</fieldset>
+						<input id="Number" name="number-range" type="range" min=1 max=5 value=3>
+						<label id="rangeLabel" for="number-range"></label>
+						<button>Feel the Bern</button>
+				</div>
+		</div>
+		</section>
+		<section>
+			<div id="content" class="hide">
+
+			</div>
+		</section>
 	</main>
 	<footer>
 		<div class="container">
-			<p>Created with brains by Web Devs</p>
+			<p>Created by <a href="http://twitter.com/collinaberg">Collin Berg</a></p>
 		</div>
 		<script src="_assets/js/main.js"></script>
 	</footer>
